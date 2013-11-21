@@ -33,8 +33,8 @@ namespace TaxiOrNot.RestApi.Controllers
                 var user = this.GetUserByPhoneId(phoneId, context);
                 var taxiFeedbackFromUser = taxiEntity.Votes.FirstOrDefault(v => v.UserId == user.Id);
 
-                taxiModel.Liked = taxiFeedbackFromUser.VoteType =="liked";
-                taxiModel.Disliked = taxiFeedbackFromUser.VoteType == "disliked";
+                taxiModel.Liked = taxiFeedbackFromUser.VoteType.Type =="liked";
+                taxiModel.Disliked = taxiFeedbackFromUser.VoteType.Type == "disliked";
                 return taxiModel;
             });
         }
