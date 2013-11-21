@@ -42,7 +42,9 @@ namespace TaxiOrNot.ResponseModels
 
         public string WebSite { get; set; }
 
-        public bool AlreadyLiked { get; set; }
+        public bool Liked { get; set; }
+
+        public bool Disliked { get; set; }
     }
 
     public class NewTaxiModel
